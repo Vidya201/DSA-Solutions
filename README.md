@@ -47,5 +47,3 @@ DSA-Solutions/
 - Problems are continuously updated as I solve more.  
 
 ---
-
-⭐ If you find this repo useful, don’t forget to **star it**!
