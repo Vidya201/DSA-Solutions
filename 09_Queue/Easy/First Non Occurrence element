@@ -1,0 +1,19 @@
+from collections import deque
+
+def firstUniqChar(s):
+    freq = {}
+    q = deque()
+
+    for i, ch in enumerate(s):
+        # count frequency
+        freq[ch] = freq.get(ch, 0) + 1
+        
+        # push index into queue
+        q.append(i)
+        
+        # remove repeating characters from front
+        while q and freq[s[q[0]]] > 1:
+            q.popleft()
+    
+    # if queue not empty, front is answer
+    return q[0] if q else -1
